@@ -33,7 +33,7 @@ function SelectedPage(page: PageCategory) {
   }
 }
 
-export default function SimpleTabs() {
+export default function MyPortfolio() {
   const classes = useStyles()
   const [value, setValue] = React.useState(PageCategory.Home)
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
