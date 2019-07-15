@@ -28,9 +28,9 @@ export default function SimpleTabs() {
           My Portfolio!
         </Typography>
         <Tabs value={value} onChange={handleChange}>
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
+          <Tab label="Home" />
+          <Tab label="Works" />
+          <Tab label="Resume" />
         </Tabs>
       </Toolbar>
     </AppBar>
