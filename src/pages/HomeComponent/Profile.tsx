@@ -33,7 +33,13 @@ export default function Profile() {
       </Box>
       <Box className={classes.sns}>
         <Box className={classes.snsIcon}>
-          <FaTwitter size={iconSize} style={{ color: "#55acee" }} />
+          <a
+            href="https://twitter.com/mistolteen_dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter size={iconSize} style={{ color: "#55acee" }} />
+          </a>
         </Box>
         <Box className={classes.snsIcon}>
           <FaGithub size={iconSize} style={{ color: "#4183c4" }} />
