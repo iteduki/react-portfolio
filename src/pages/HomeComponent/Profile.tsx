@@ -12,8 +12,7 @@ const useStyles = makeStyles({
     alignItems: "center"
   },
   sns: {
-    display: "flex",
-    paddingTop: 16
+    display: "flex"
   },
   snsIcon: {
     padding: 16
