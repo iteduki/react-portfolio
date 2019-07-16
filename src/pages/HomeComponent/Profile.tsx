@@ -25,7 +25,11 @@ export default function Profile() {
   const classes = useStyles()
   return (
     <Box className={classes.profile}>
-      <img src={icon} alt="" />
+      <Box>
+        <img src={icon} alt="" />
+      </Box>
+      <Box>Name</Box>
+      <Box>Software Engineer</Box>
       <Box className={classes.sns}>
         <FaTwitter />
         <FaGithub />
