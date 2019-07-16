@@ -2,6 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Box } from "@material-ui/core"
 import Profile from "./HomeComponent/Profile"
+import Biography from "./HomeComponent/Biography"
 
 const useStyles = makeStyles({
   root: {
@@ -9,11 +10,6 @@ const useStyles = makeStyles({
     paddingTop: 50,
     paddingLeft: 100,
     paddingRight: 100
-  },
-  biography: {
-    padding: 1,
-    flexGrow: 3,
-    backgroundColor: "gray"
   }
 })
 
@@ -27,7 +23,7 @@ export default function Home({ text = "Home" }: HomeProps) {
     <>
       <Box className={classes.root}>
         <Profile />
-        <Box className={classes.biography}>Item 2</Box>
+        <Biography />
       </Box>
     </>
   )
