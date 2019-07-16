@@ -4,11 +4,24 @@ import { Box } from "@material-ui/core"
 import icon from "../assets/icon.jpg"
 
 const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    paddingTop: 50,
+    paddingLeft: 100,
+    paddingRight: 100
+  },
   profile: {
-    flexGrow: 2
+    padding: 1,
+    flexGrow: 2,
+    backgroundColor: "red",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   biography: {
-    flexGrow: 3
+    padding: 1,
+    flexGrow: 3,
+    backgroundColor: "gray"
   }
 })
 
@@ -20,13 +33,11 @@ export default function Home({ text = "Home" }: HomeProps) {
   const classes = useStyles()
   return (
     <>
-      <Box display="flex" padding={1} bgcolor="background.paper">
-        <Box padding={1} flexGrow={2} bgcolor="grey.300">
-          <img src={icon} />
+      <Box className={classes.root}>
+        <Box className={classes.profile}>
+          <img src={icon} alt="" />
         </Box>
-        <Box padding={1} flexGrow={3} bgcolor="grey.300">
-          Item 2
-        </Box>
+        <Box className={classes.biography}>Item 2</Box>
       </Box>
     </>
   )
