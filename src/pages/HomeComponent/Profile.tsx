@@ -6,34 +6,42 @@ import { FaTwitter, FaGithub, FaLink } from "react-icons/fa"
 
 const useStyles = makeStyles({
   profile: {
-    padding: 1,
     flexGrow: 2,
-    backgroundColor: "red",
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
   },
   sns: {
     display: "flex",
-    backgroundColor: "blue",
-    margin: 20,
-    padding: 20
+    paddingTop: 16
+  },
+  snsIcon: {
+    padding: 16
   }
 })
 
 export default function Profile() {
   const classes = useStyles()
+  const iconSize = 32
   return (
     <Box className={classes.profile}>
       <Box>
         <img src={icon} alt="" />
       </Box>
-      <Box>Name</Box>
-      <Box>Software Engineer</Box>
+      <Box>
+        <h2>iteduki</h2>
+        <h3>Software Engineer</h3>
+      </Box>
       <Box className={classes.sns}>
-        <FaTwitter />
-        <FaGithub />
-        <FaLink />
+        <Box className={classes.snsIcon}>
+          <FaTwitter size={iconSize} style={{ color: "#55acee" }} />
+        </Box>
+        <Box className={classes.snsIcon}>
+          <FaGithub size={iconSize} style={{ color: "#4183c4" }} />
+        </Box>
+        <Box className={classes.snsIcon}>
+          <FaLink size={iconSize} />
+        </Box>
       </Box>
     </Box>
   )
