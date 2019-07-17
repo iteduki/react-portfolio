@@ -42,7 +42,13 @@ export default function Profile() {
           </a>
         </Box>
         <Box className={classes.snsIcon}>
-          <FaGithub size={iconSize} style={{ color: "#4183c4" }} />
+          <a
+            href="https://github.com/iteduki"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={iconSize} style={{ color: "#4183c4" }} />
+          </a>
         </Box>
         <Box className={classes.snsIcon}>
           <FaLink size={iconSize} />
