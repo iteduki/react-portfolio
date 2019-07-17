@@ -4,10 +4,11 @@ import { Box } from "@material-ui/core"
 import icon from "../../assets/icon.jpg"
 import qiitaIcon from "../../assets/qiita-favicon.png"
 import { FaTwitter, FaGithub, FaLink } from "react-icons/fa"
+import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles({
   profile: {
-    flexGrow: 2,
+    flexGrow: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
@@ -29,8 +30,10 @@ export default function Profile() {
         <img src={icon} alt="" />
       </Box>
       <Box>
-        <h2>iteduki</h2>
-        <h3>ソフトウェアエンジニア</h3>
+        <Typography variant="h4">iteduki</Typography>
+      </Box>
+      <Box>
+        <Typography variant="h5">ソフトウェアエンジニア</Typography>
       </Box>
       <Box className={classes.sns}>
         <Box className={classes.snsIcon}>

@@ -1,11 +1,12 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Box } from "@material-ui/core"
+import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles({
   biography: {
-    flexGrow: 3,
-    backgroundColor: "gray"
+    flexGrow: 1,
+    marginTop: 30
   }
 })
 export default function Biography() {
@@ -13,29 +14,41 @@ export default function Biography() {
   return (
     <Box className={classes.biography}>
       <Box>
-        <h1>Biography</h1>
+        <Typography variant="h4">バイオグラフィー</Typography>
       </Box>
       <Box>
         <ul>
-          <li>iteduki</li>
-          <li>1988/01/27</li>
+          <li>
+            <Typography variant="body1">iteduki</Typography>
+          </li>
+          <li>
+            <Typography variant="body1">1988/01/27</Typography>
+          </li>
         </ul>
       </Box>
       <Box>
-        <h2>学歴・資格</h2>
+        <Typography variant="h4">学歴・資格</Typography>
       </Box>
       <Box>
         <Box>
-          <p>岐阜大学工学部応用情報学科</p>
-          <p>2010年3月卒</p>
-        </Box>
-        <Box>
-          <p>基本情報技術者試験</p>
-          <p>2012年8月</p>
-        </Box>
-        <Box>
-          <p>情報セキュリティマネジメント試験</p>
-          <p>2016年5月</p>
+          <ul>
+            <li>
+              <Typography variant="body1">
+                岐阜大学工学部応用情報学科
+              </Typography>
+              <Typography variant="caption">2010年3月卒</Typography>
+            </li>
+            <li>
+              <Typography variant="body1">基本情報技術者試験</Typography>
+              <Typography variant="caption">2012年8月</Typography>
+            </li>
+            <li>
+              <Typography variant="body1">
+                情報セキュリティマネジメント試験
+              </Typography>
+              <Typography variant="caption">2016年5月</Typography>
+            </li>
+          </ul>
         </Box>
       </Box>
     </Box>
