@@ -2,6 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Box } from "@material-ui/core"
 import icon from "../../assets/icon.jpg"
+import qiitaIcon from "../../assets/qiita-favicon.png"
 import { FaTwitter, FaGithub, FaLink } from "react-icons/fa"
 
 const useStyles = makeStyles({
@@ -48,6 +49,15 @@ export default function Profile() {
             rel="noopener noreferrer"
           >
             <FaGithub size={iconSize} style={{ color: "#4183c4" }} />
+          </a>
+        </Box>
+        <Box className={classes.snsIcon}>
+          <a
+            href="https://qiita.com/mistolteen"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={qiitaIcon} width={32} height={32} alt="" />
           </a>
         </Box>
         <Box className={classes.snsIcon}>
