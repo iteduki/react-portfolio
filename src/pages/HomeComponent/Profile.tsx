@@ -51,7 +51,13 @@ export default function Profile() {
           </a>
         </Box>
         <Box className={classes.snsIcon}>
-          <FaLink size={iconSize} />
+          <a
+            href="https://iteduki.hateblo.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLink size={iconSize} />
+          </a>
         </Box>
       </Box>
     </Box>
