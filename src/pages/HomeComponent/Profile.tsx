@@ -30,7 +30,7 @@ export default function Profile() {
       </Box>
       <Box>
         <h2>iteduki</h2>
-        <h3>Software Engineer</h3>
+        <h3>ソフトウェアエンジニア</h3>
       </Box>
       <Box className={classes.sns}>
         <Box className={classes.snsIcon}>
