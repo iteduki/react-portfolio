@@ -1,5 +1,11 @@
 import React from "react"
-import { Box, Typography, makeStyles } from "@material-ui/core"
+import {
+  Box,
+  Typography,
+  makeStyles,
+  Card,
+  CardContent
+} from "@material-ui/core"
 import contents from "./WorksComponent/contents.json"
 
 type Contents = {
@@ -15,6 +21,10 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     margin: 20
+  },
+  cardBox: { display: "flex" },
+  card: {
+    padding: 16
   }
 })
 
@@ -23,9 +33,17 @@ export default function Works() {
   return (
     <Box className={classes.works}>
       <Typography variant="h1">Works</Typography>
-      <Box style={{ display: "flex" }}>
+      <Box className={classes.cardBox}>
         {contents.map((item: Contents, key) => {
-          return <Typography>{item.title}</Typography>
+          return (
+            <Box className={classes.card}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6">{item.title}</Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          )
         })}
       </Box>
     </Box>
