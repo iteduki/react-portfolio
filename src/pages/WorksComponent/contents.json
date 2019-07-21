@@ -9,7 +9,7 @@
     "title": "GAS-shindanmaker-bot",
     "tools": ["GoogleAppsScript"],
     "description": "GoogleAppsScriptから診断メーカーのフォームにポストして結果を取得するコードです。GASは標準でスケジュール実行できるので毎日診断を回すのにとても向いています。技術書典5にてこのコードを題材にした技術同人誌を頒布しました（サークル名：Frozen moon）",
-    "href": "https://github.com/iteduki/slamp_gas"
+    "href": "https://github.com/iteduki/GAS-shindanmaker-bot"
   },
   {
     "title": "Saizeriya_1000yen_ruby",
@@ -20,6 +20,7 @@
   {
     "title": "react-portfolio",
     "tools": ["Typescript", "React", "Material-UI"],
-    "description": "このサイトです。"
+    "description": "このサイトです。Reactは少しやっていましたがTypescriptの作法やMaterial-UIの使い方、CSSの知識などを少しずつ学びながら作りました。",
+    "href": "https://github.com/iteduki/react-portfolio"
   }
 ]

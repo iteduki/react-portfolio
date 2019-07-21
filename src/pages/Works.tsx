@@ -5,7 +5,7 @@ import {
   makeStyles,
   Card,
   CardContent,
-  Button
+  CardActionArea
 } from "@material-ui/core"
 import contents from "./WorksComponent/contents.json"
 
@@ -13,7 +13,7 @@ type Contents = {
   title: string
   tools: Array<String>
   description: string
-  href?: string
+  href: string
 }
 
 const cardWidth = 360
@@ -35,6 +35,10 @@ const useStyles = makeStyles({
     margin: cardMargin,
     height: 300,
     width: cardWidth
+  },
+  cardActionArea: {
+    height: 300,
+    width: cardWidth
   }
 })
 
@@ -47,22 +51,24 @@ export default function Works() {
         {contents.map((item: Contents) => {
           return (
             <Card className={classes.card}>
-              <CardContent>
-                <Typography variant="h5">{item.title}</Typography>
-                <Typography variant="body1">
-                  {item.tools.join(" + ")}
-                </Typography>
-                <Typography variant="body2">{item.description}</Typography>
-                {item.href ? (
-                  <Button
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={item.href}
-                  >
-                    リンク
-                  </Button>
-                ) : null}
-              </CardContent>
+              <CardActionArea
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.cardActionArea}
+              >
+                <CardContent>
+                  <Typography variant="h5" gutterBottom>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                    {item.tools.join(" + ")}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {item.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Card>
           )
         })}
