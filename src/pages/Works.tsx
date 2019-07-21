@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     margin: 20
   },
-  cardBox: { display: "flex" },
+  cardBox: { display: "flex", flexWrap: "wrap" },
   card: {
     padding: 16
   }
