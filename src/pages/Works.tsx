@@ -16,6 +16,8 @@ type Contents = {
   href?: string
 }
 
+const cardWidth = 360
+const cardMargin = 20
 const useStyles = makeStyles({
   works: {
     display: "flex",
@@ -27,12 +29,12 @@ const useStyles = makeStyles({
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    maxWidth: (300 + 16) * 4
+    maxWidth: (cardWidth + cardMargin * 2) * 3 // 一行にCard3つまで
   },
   card: {
-    margin: 16,
+    margin: cardMargin,
     height: 300,
-    width: 280
+    width: cardWidth
   }
 })
 
@@ -47,11 +49,8 @@ export default function Works() {
             <Card className={classes.card}>
               <CardContent>
                 <Typography variant="h6">{item.title}</Typography>
-                <Typography variant="body1">
-                  {item.tools}
-                  <br />
-                  {item.description}
-                </Typography>
+                <Typography variant="body1">{item.tools}</Typography>
+                <Typography variant="body2">{item.description}</Typography>
                 {item.href ? (
                   <Button
                     target="_blank"
