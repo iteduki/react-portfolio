@@ -4,7 +4,8 @@ import {
   Typography,
   makeStyles,
   Card,
-  CardContent
+  CardContent,
+  Button
 } from "@material-ui/core"
 import contents from "./WorksComponent/contents.json"
 
@@ -22,7 +23,10 @@ const useStyles = makeStyles({
     alignItems: "center",
     margin: 20
   },
-  cardBox: { display: "flex", flexWrap: "wrap" },
+  cardBox: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
   card: {
     padding: 16
   }
@@ -40,6 +44,20 @@ export default function Works() {
               <Card>
                 <CardContent>
                   <Typography variant="h6">{item.title}</Typography>
+                  <Typography variant="body1">
+                    {item.tools}
+                    <br />
+                    {item.description}
+                  </Typography>
+                  {item.href ? (
+                    <Button
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={item.href}
+                    >
+                      リンク
+                    </Button>
+                  ) : null}
                 </CardContent>
               </Card>
             </Box>
