@@ -11,7 +11,7 @@ import contents from "./WorksComponent/contents.json"
 
 type Contents = {
   title: string
-  tools: string
+  tools: Array<String>
   description: string
   href?: string
 }
@@ -44,12 +44,14 @@ export default function Works() {
     <Box className={classes.works}>
       <Typography variant="h2">Works</Typography>
       <Box className={classes.cardBox}>
-        {contents.map((item: Contents, key) => {
+        {contents.map((item: Contents) => {
           return (
             <Card className={classes.card}>
               <CardContent>
-                <Typography variant="h6">{item.title}</Typography>
-                <Typography variant="body1">{item.tools}</Typography>
+                <Typography variant="h5">{item.title}</Typography>
+                <Typography variant="body1">
+                  {item.tools.join(" + ")}
+                </Typography>
                 <Typography variant="body2">{item.description}</Typography>
                 {item.href ? (
                   <Button
