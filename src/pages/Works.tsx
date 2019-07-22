@@ -58,10 +58,10 @@ export default function Works() {
                 className={classes.cardActionArea}
               >
                 <CardContent>
-                  <Typography variant="h5" gutterBottom>
+                  <Typography variant="h5" align="center" gutterBottom>
                     {item.title}
                   </Typography>
-                  <Typography variant="body1" gutterBottom>
+                  <Typography variant="body1" align="center" gutterBottom>
                     {item.tools.join(" + ")}
                   </Typography>
                   <Typography variant="body2" gutterBottom>
