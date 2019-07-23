@@ -1,6 +1,17 @@
 import React from "react"
 import { Box, Typography, Card, CardContent } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
+import contents from "./ResumeComponent/contents.json"
+import dayjs from "dayjs"
+
+type Resume = {
+  company: String
+  industry: String
+  startAt: String
+  endAt?: String
+  skills: Array<String>
+  comment: String
+}
 
 const useStyles = makeStyles({
   resume: {
@@ -11,7 +22,8 @@ const useStyles = makeStyles({
   },
   card: {
     width: "100%",
-    maxWidth: 1200
+    maxWidth: 1200,
+    margin: 20
   },
   skillCard: { margin: 8 }
 })
@@ -21,36 +33,45 @@ export default function Resume() {
   return (
     <Box className={classes.resume}>
       <Typography variant="h2">Resume</Typography>
-      <Card className={classes.card}>
-        <CardContent>
-          <Typography variant="h4">都内 SIer</Typography>
-          <ul>
-            <li>
-              <Typography variant="body1">受託開発</Typography>
-            </li>
-            <li>
-              <Typography variant="body1">2018/7 ~</Typography>
-            </li>
-          </ul>
-          <Typography variant="h5">技術</Typography>
-          <Box style={{ display: "flex" }}>
-            <Card className={classes.skillCard}>
-              <CardContent>
-                <Typography variant="body1">Ruby on Rails</Typography>
-              </CardContent>
-            </Card>
-            <Card className={classes.skillCard}>
-              <CardContent>
-                <Typography variant="body1">React Native</Typography>
-              </CardContent>
-            </Card>
-          </Box>
-          <Typography variant="h5" gutterBottom>
-            コメント
-          </Typography>
-          <Typography variant="body1">毎日頑張りました</Typography>
-        </CardContent>
-      </Card>
+      {contents.map((item: Resume) => {
+        return (
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography variant="h4">{item.company}</Typography>
+              <ul>
+                <li>
+                  <Typography variant="body1">{item.industry}</Typography>
+                </li>
+                <li>
+                  <Typography variant="body1">{`${dayjs(
+                    item.startAt as string
+                  ).format("YYYY/MM")} 〜 ${
+                    item.endAt
+                      ? dayjs(item.endAt as string).format("YYYY/MM")
+                      : "現職"
+                  }`}</Typography>
+                </li>
+              </ul>
+              <Typography variant="h5">技術</Typography>
+              <Box style={{ display: "flex" }}>
+                {item.skills.map((skill: String) => {
+                  return (
+                    <Card className={classes.skillCard}>
+                      <CardContent>
+                        <Typography variant="body1">{skill}</Typography>
+                      </CardContent>
+                    </Card>
+                  )
+                })}
+              </Box>
+              <Typography variant="h5" gutterBottom>
+                コメント
+              </Typography>
+              <Typography variant="body1">{item.comment}</Typography>
+            </CardContent>
+          </Card>
+        )
+      })}
     </Box>
   )
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "company": "都内 SIer",
+    "industry": "受託開発",
+    "startAt": "2018-07-01",
+    "skills": ["Ruby on Rails", "React Native", "Git", "スクラム"],
+    "comment": "毎日頑張りました。"
+  },
+  {
+    "company": "都内 SIer",
+    "industry": "受託開発",
+    "startAt": "2018-07-01",
+    "endAt": "2019-01-01",
+    "skills": ["Ruby on Rails", "React Native", "Git", "スクラム"],
+    "comment": "毎日頑張りました。"
+  }
+]
