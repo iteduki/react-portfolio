@@ -10,7 +10,7 @@ type Resume = {
   startAt: String
   endAt?: String
   skills: Array<String>
-  comment: String
+  comments: Array<String>
 }
 
 const useStyles = makeStyles({
@@ -67,7 +67,11 @@ export default function Resume() {
               <Typography variant="h5" gutterBottom>
                 コメント
               </Typography>
-              <Typography variant="body1">{item.comment}</Typography>
+              <ul>
+              {item.comments.map((comment) => {
+                return <li><Typography variant="body1">{comment}</Typography></li>
+              })}
+              </ul>
             </CardContent>
           </Card>
         )
