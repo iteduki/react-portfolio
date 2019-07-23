@@ -7,11 +7,19 @@
     "comment": "毎日頑張りました。"
   },
   {
-    "company": "都内 SIer",
-    "industry": "受託開発",
-    "startAt": "2018-07-01",
-    "endAt": "2019-01-01",
-    "skills": ["Ruby on Rails", "React Native", "Git", "スクラム"],
+    "company": "愛知県 ゲーム・アミューズメント機器",
+    "industry": "情報システム",
+    "startAt": "2012-05-01",
+    "endAt": "2018-6-30",
+    "skills": ["C#", "ExtJS", "MongoDB", "GoogleAppsScript", "G Suite"],
+    "comment": "毎日頑張りました。"
+  },
+  {
+    "company": "名古屋 SIer",
+    "industry": "SES",
+    "startAt": "2010-04-01",
+    "endAt": "2012-04-30",
+    "skills": ["Adobe Flex", "java", "Seasar2", "C#"],
     "comment": "毎日頑張りました。"
   }
 ]
