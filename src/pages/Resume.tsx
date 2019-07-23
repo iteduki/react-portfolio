@@ -52,7 +52,7 @@ export default function Resume() {
                   }`}</Typography>
                 </li>
               </ul>
-              <Typography variant="h5">技術</Typography>
+              <Typography variant="h5">技術トピック</Typography>
               <Box style={{ display: "flex" }}>
                 {item.skills.map((skill: String) => {
                   return (
