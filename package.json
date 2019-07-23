@@ -19,6 +19,7 @@
     "react-scripts": "3.0.1",
     "typescript": "3.5.3"
   },
+  "homepage": "https://iteduki.github.io/react-portfolio/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
