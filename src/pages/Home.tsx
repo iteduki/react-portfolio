@@ -13,11 +13,7 @@ const useStyles = makeStyles({
   }
 })
 
-type HomeProps = {
-  text?: string
-}
-
-export default function Home({ text = "Home" }: HomeProps) {
+export default function Home() {
   const classes = useStyles()
   return (
     <>
